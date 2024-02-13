@@ -54,7 +54,7 @@ function setToKorean(note) {
                     break;
                 case 2:
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "a"] : ["ia"];
+                    syllable_phonemes = 11 == onset ? ["j", "a"] : ["#j", "a"];
                     break;
                 case 3:
                     note.setLanguageOverride("english");
@@ -74,7 +74,7 @@ function setToKorean(note) {
                     break;
                 case 7:
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "e"] : ["ie"];
+                    syllable_phonemes = 11 == onset ? ["j", "e"] : ["#j", "e"];
                     break;
                 case 8:
                     note.setLanguageOverride("mandarin");
@@ -82,7 +82,7 @@ function setToKorean(note) {
                     break;
                 case 9:
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["w", "a"] : ["ua"];
+                    syllable_phonemes = 11 == onset ? ["w", "a"] : ["#w", "a"];
                     break;
                 case 10:
                     note.setLanguageOverride("english");
@@ -106,7 +106,7 @@ function setToKorean(note) {
                     break;
                 case 15:
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["w", "e"] : ["ue"];
+                    syllable_phonemes = 11 == onset ? ["w", "e"] : ["#w", "e"];
                     break;
                 case 16:
                     note.setLanguageOverride("mandarin");
@@ -346,7 +346,7 @@ function setToKorean(note) {
         }
         phonemes = phonemes.concat(syllable_phonemes);
     }
-    note.setPhonemes(phonemes.join(" ").replaceAll("#", "").replaceAll("$", "").replaceAll("%", ""));
+    note.setPhonemes(phonemes.join(" ").replaceAll(/#/, "").replaceAll(/\$/, "").replaceAll(/%/, ""));
     var note_durs = [];
     var note_strs = [];
     for (var i = 0; i < phonemes.length; ++i) {
