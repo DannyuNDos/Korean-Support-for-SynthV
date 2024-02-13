@@ -94,8 +94,8 @@ function setToKorean(note) {
                     syllable_phonemes = ["u"];
                     break;
                 case 14:
-                    note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["w", "@"] :["u@"];
+                    note.setLanguageOverride("english");
+                    syllable_phonemes = 11 == onset ? ["w", "ao"] :["#w", "ao"];
                     break;
                 case 15:
                     note.setLanguageOverride("mandarin");
