@@ -79,7 +79,7 @@ function setToKorean(note) {
                     break;
                 case 10:
                     note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["w", "a"] : ["#w", "eh"];
+                    syllable_phonemes = 11 == onset ? ["w", "eh"] : ["#w", "eh"];
                     break;
                 case 11:
                     note.setLanguageOverride("english");
