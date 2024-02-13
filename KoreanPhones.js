@@ -17,17 +17,19 @@ function main() {
 };
 
 function setToKorean(note) {
-    const lyrics = note.getLyrics();
+    var lyrics = note.getLyrics();
     if ("-" == lyrics) {
         note.setPhonemes("");
         return;
     }
     var phonemes = [];
-    for (var i = 0; i < lyrics.length; ++i) {
-        if ("'".charCodeAt(0) == lyrics.charCodeAt(i)) {
-            phonemes.push("cl");
-        }
-        else if ("가".charCodeAt(0) <= lyrics.charCodeAt(i) && lyrics.charCodeAt(i) <= "힣".charCodeAt(0)) {
+    var leading_glottal = 0;
+    if ("'".charCodeAt(0) == lyrics.charCodeAt(0)) {
+        phonemes.push("cl");
+        leading_glottal = 1;
+    }
+    for (var i = leading_glottal; i < lyrics.length; ++i) {
+        if ("가".charCodeAt(0) <= lyrics.charCodeAt(i) && lyrics.charCodeAt(i) <= "힣".charCodeAt(0)) {
             var syllable_phonemes = [];
             const onsetN = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ".length;
             const vowelN = "ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ".length;
@@ -83,7 +85,7 @@ function setToKorean(note) {
                     break;
                 case 11:
                     note.setLanguageOverride("english");
-                    syllable_phonemes = ["ax"];
+                    syllable_phonemes = 11 == onset ? ["w", "eh"] : ["#w", "eh"];
                     break;
                 case 12:
                     note.setLanguageOverride("mandarin");
@@ -103,7 +105,7 @@ function setToKorean(note) {
                     break;
                 case 16:
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = ["y"];
+                    syllable_phonemes = ["y", ":\\i"];
                     break;
                 case 17:
                     note.setLanguageOverride("mandarin");
@@ -349,11 +351,11 @@ function setToKorean(note) {
                 note_strs.push(1);
                 break;
             case '$':
-                note_durs.push(1);
+                note_durs.push(0.5);
                 note_strs.push(1.8);
                 break;
             case '%':
-                note_durs.push(1);
+                note_durs.push(1.8);
                 note_strs.push(0.2);
                 break;
             default:
