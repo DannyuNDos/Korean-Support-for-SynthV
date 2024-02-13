@@ -16,6 +16,11 @@ function main() {
     SV.finish();
 };
 
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
+
 function setToKorean(note) {
     var lyrics = note.getLyrics();
     if ("-" == lyrics) {
@@ -341,7 +346,7 @@ function setToKorean(note) {
         }
         phonemes = phonemes.concat(syllable_phonemes);
     }
-    note.setPhonemes(phonemes.join(" ").replace("#", "").replace("$", "").replace("%", ""));
+    note.setPhonemes(phonemes.join(" ").replaceAll("#", "").replaceAll("$", "").replaceAll("%", ""));
     var note_durs = [];
     var note_strs = [];
     for (var i = 0; i < phonemes.length; ++i) {
