@@ -11,3 +11,5 @@ In the SynthV Studio, select the notes that has Korean lyrics written in Hangul,
 
 ## Caveats
 You need SynthV Studio Pro to use this script.
+
+This script doesn't actually add Korean as a new language, but merely emulates Korean by using Mandarin and English phonemes.
