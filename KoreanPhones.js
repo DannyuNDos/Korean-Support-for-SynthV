@@ -49,28 +49,28 @@ function setToKorean(note) {
                     syllable_phonemes = ["a"];
                     break;
                 case 1:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = ["eh"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = ["e"];
                     break;
                 case 2:
                     note.setLanguageOverride("mandarin");
                     syllable_phonemes = 11 == onset ? ["j", "a"] : ["#j", "a"];
                     break;
                 case 3:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["y", "eh"] : ["#y", "eh"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = 11 == onset ? ["j", "e"] : ["#j", "e"];
                     break;
                 case 4:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = ["ao"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = ["7"];
                     break;
                 case 5:
                     note.setLanguageOverride("mandarin");
                     syllable_phonemes = ["e"];
                     break;
                 case 6:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["y", "ao"] : ["#y", "ao"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = 11 == onset ? ["j", "7"] : ["#j", "7"];
                     break;
                 case 7:
                     note.setLanguageOverride("mandarin");
@@ -85,12 +85,12 @@ function setToKorean(note) {
                     syllable_phonemes = 11 == onset ? ["w", "a"] : ["#w", "a"];
                     break;
                 case 10:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["w", "eh"] : ["#w", "eh"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = 11 == onset ? ["w", "e"] : ["#w", "e"];
                     break;
                 case 11:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["w", "eh"] : ["#w", "eh"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = 11 == onset ? ["w", "e"] : ["#w", "e"];
                     break;
                 case 12:
                     note.setLanguageOverride("mandarin");
@@ -101,8 +101,8 @@ function setToKorean(note) {
                     syllable_phonemes = ["u"];
                     break;
                 case 14:
-                    note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["w", "ao"] :["#w", "ao"];
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = 11 == onset ? ["w", "7"] :["#w", "7"];
                     break;
                 case 15:
                     note.setLanguageOverride("mandarin");
@@ -233,110 +233,6 @@ function setToKorean(note) {
                         break;
                     case 21:
                         syllable_phonemes.push("N");
-                        break;
-                    default:
-                        syllable_phonemes.push("cl");
-                        break;
-                }
-            }
-            else {
-                switch (onset) {
-                    case 0:
-                        syllable_phonemes = ["g"].concat(syllable_phonemes);
-                        break;
-                    case 1:
-                        syllable_phonemes = ["cl", "#g"].concat(syllable_phonemes);
-                        break;
-                    case 2:
-                        syllable_phonemes = ["#n"].concat(syllable_phonemes);
-                        break;
-                    case 3:
-                        syllable_phonemes = ["d"].concat(syllable_phonemes);
-                        break;
-                    case 4:
-                        syllable_phonemes = ["cl", "#d"].concat(syllable_phonemes);
-                        break;
-                    case 5:
-                        syllable_phonemes = ["dx"].concat(syllable_phonemes);
-                        break;
-                    case 6:
-                        syllable_phonemes = ["#m"].concat(syllable_phonemes);
-                        break;
-                    case 7:
-                        syllable_phonemes = ["b"].concat(syllable_phonemes);
-                        break;
-                    case 8:
-                        syllable_phonemes = ["cl", "#b"].concat(syllable_phonemes);
-                        break;
-                    case 9:
-                        if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["$sh"].concat(syllable_phonemes.slice(1));
-                        }
-                        else {
-                            syllable_phonemes = ["$s"].concat(syllable_phonemes);
-                        }
-                        break;
-                    case 10:
-                        if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["%sh"].concat(syllable_phonemes.slice(1));
-                        }
-                        else {
-                            syllable_phonemes = ["%s"].concat(syllable_phonemes);
-                        }
-                        break;
-                    case 11:
-                        break;
-                    case 12:
-                        if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["jh"].concat(syllable_phonemes.slice(1));
-                        }
-                        else {
-                            syllable_phonemes = ["jh"].concat(syllable_phonemes);
-                        }
-                        break;
-                    case 13:
-                        if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["cl", "#jh"].concat(syllable_phonemes.slice(1));
-                        }
-                        else {
-                            syllable_phonemes = ["cl", "#jh"].concat(syllable_phonemes);
-                        }
-                        break;
-                    case 14:
-                        if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["ch"].concat(syllable_phonemes.slice(1));
-                        }
-                        else {
-                            syllable_phonemes = ["ch"].concat(syllable_phonemes);
-                        }
-                        break;
-                    case 15:
-                        syllable_phonemes = ["k"].concat(syllable_phonemes);
-                        break;
-                    case 16:
-                        syllable_phonemes = ["t"].concat(syllable_phonemes);
-                        break;
-                    case 17:
-                        syllable_phonemes = ["p"].concat(syllable_phonemes);
-                        break;
-                    default:
-                        syllable_phonemes = ["hh"].concat(syllable_phonemes);
-                        break;
-                }
-                switch (coda) {
-                    case 0:
-                        break;
-                    case 4: case 5: case 6:
-                        syllable_phonemes.push("n");
-                        break;
-                    case 8: case 11: case 12: case 13: case 14:
-                        syllable_phonemes.push("l");
-                        break;
-                    case 10: case 16:
-                        syllable_phonemes.push("m");
-                        break;
-                    case 21:
-                        syllable_phonemes.push("ng");
                         break;
                     default:
                         syllable_phonemes.push("cl");
