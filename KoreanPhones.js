@@ -126,7 +126,7 @@ function setToKorean(note) {
                     break;
                 default:
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "i"] : ["i"];
+                    syllable_phonemes = ["i"];
                     break;
             }
             if ("mandarin" == note.getLanguageOverride()) {
@@ -138,7 +138,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["cl", "#k"].concat(syllable_phonemes);
                         break;
                     case 2:
-                        syllable_phonemes = ["n"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#n"].concat(syllable_phonemes);
                         break;
                     case 3:
                         syllable_phonemes = ["t"].concat(syllable_phonemes);
@@ -150,7 +150,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["#l"].concat(syllable_phonemes);
                         break;
                     case 6:
-                        syllable_phonemes = ["m"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#m"].concat(syllable_phonemes);
                         break;
                     case 7:
                         syllable_phonemes = ["p"].concat(syllable_phonemes);
@@ -248,7 +248,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["cl", "#g"].concat(syllable_phonemes);
                         break;
                     case 2:
-                        syllable_phonemes = ["n"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#n"].concat(syllable_phonemes);
                         break;
                     case 3:
                         syllable_phonemes = ["d"].concat(syllable_phonemes);
@@ -260,7 +260,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["dx"].concat(syllable_phonemes);
                         break;
                     case 6:
-                        syllable_phonemes = ["m"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#m"].concat(syllable_phonemes);
                         break;
                     case 7:
                         syllable_phonemes = ["b"].concat(syllable_phonemes);
