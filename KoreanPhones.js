@@ -135,7 +135,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["k"].concat(syllable_phonemes);
                         break;
                     case 1:
-                        syllable_phonemes = ["cl", "#k"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#cl", "#k"].concat(syllable_phonemes);
                         break;
                     case 2:
                         syllable_phonemes = ["#n"].concat(syllable_phonemes);
@@ -144,7 +144,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["t"].concat(syllable_phonemes);
                         break;
                     case 4:
-                        syllable_phonemes = ["cl", "#t"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#cl", "#t"].concat(syllable_phonemes);
                         break;
                     case 5:
                         syllable_phonemes = ["#l"].concat(syllable_phonemes);
@@ -156,7 +156,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["p"].concat(syllable_phonemes);
                         break;
                     case 8:
-                        syllable_phonemes = ["cl", "#p"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#cl", "#p"].concat(syllable_phonemes);
                         break;
                     case 9:
                         if (syllable_phonemes[0] == "j") {
@@ -192,10 +192,10 @@ function setToKorean(note) {
                         break;
                     case 13:
                         if (syllable_phonemes[0] == "j") {
-                            syllable_phonemes = ["cl", "#ts\\"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#cl", "#ts\\"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["cl", "#ts\\"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#cl", "#ts\\"].concat(syllable_phonemes);
                         }
                         break;
                     case 14:
