@@ -160,13 +160,13 @@ function setToKorean(note) {
                         break;
                     case 9:
                         if (syllable_phonemes[0] == "j") {
-                            syllable_phonemes = ["$s\\"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#s\\"].concat(syllable_phonemes.slice(1));
                         }
                         else if (["i", "y"].indexOf(syllable_phonemes[0]) >= 0) {
-                            syllable_phonemes = ["$s\\"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#s\\"].concat(syllable_phonemes);
                         }
                         else {
-                            syllable_phonemes = ["$s"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#s"].concat(syllable_phonemes);
                         }
                         break;
                     case 10:
@@ -249,15 +249,11 @@ function setToKorean(note) {
         switch (phonemes[i][0]) {
             case '#':
                 note_durs.push(0.5);
-                note_strs.push(1);
-                break;
-            case '$':
-                note_durs.push(0.5);
                 note_strs.push(1.8);
                 break;
             case '%':
                 note_durs.push(1.8);
-                note_strs.push(0.2);
+                note_strs.push(1.8);
                 break;
             default:
                 note_durs.push(1);
