@@ -237,7 +237,7 @@ function setToKorean(note) {
                     case 7: case 19: case 20: case 22: case 23: case 25: case 27:
                         syllable_phonemes.push("t");
                         break;
-                                    case 14: case 17: case 18: case 26:
+                    case 14: case 17: case 18: case 26:
                         syllable_phonemes.push("p");
                         break;
                     default:
