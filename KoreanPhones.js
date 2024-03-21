@@ -93,7 +93,7 @@ function setToKorean(note) {
                     syllable_phonemes = 21 == coda ? (11 == onset ? ["j", "o"] : ["#j", "o"]) : ["y", "o"];
                     break;
                 case 13:
-                    note.setLanguageOverride(21 == coda ? "mandarin" : "japanese");
+                    note.setLanguageOverride("mandarin");
                     syllable_phonemes = ["u"];
                     break;
                 case 14:
@@ -401,10 +401,10 @@ function setToKorean(note) {
                         break;
                     case 5:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["ry"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#ry"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["r"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#r"].concat(syllable_phonemes);
                         }
                         break;
                     case 6:
