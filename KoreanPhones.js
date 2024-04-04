@@ -98,7 +98,7 @@ function setToKorean(note) {
                     break;
                 case 14:
                     note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "english");
-                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "8"] : (11 == onset ? ["w", "ao"] : ["#w", "ao"]);
+                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "O"] : (11 == onset ? ["w", "ao"] : ["#w", "ao"]);
                     break;
                 case 15:
                     note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "english");
