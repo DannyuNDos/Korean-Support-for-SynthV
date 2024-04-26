@@ -196,20 +196,20 @@ function setToKorean(note) {
                         break;
                     case 14:
                         if (syllable_phonemes[0] == "#j") {
-                            syllable_phonemes = ["%ts\\h"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["ts\\h"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%ts\\h"].concat(syllable_phonemes);
+                            syllable_phonemes = ["ts\\h"].concat(syllable_phonemes);
                         }
                         break;
                     case 15:
-                        syllable_phonemes = ["%kh"].concat(syllable_phonemes);
+                        syllable_phonemes = ["kh"].concat(syllable_phonemes);
                         break;
                     case 16:
-                        syllable_phonemes = ["%th"].concat(syllable_phonemes);
+                        syllable_phonemes = ["th"].concat(syllable_phonemes);
                         break;
                     case 17:
-                        syllable_phonemes = ["%ph"].concat(syllable_phonemes);
+                        syllable_phonemes = ["ph"].concat(syllable_phonemes);
                         break;
                     default:
                         syllable_phonemes = ["x"].concat(syllable_phonemes);
@@ -312,20 +312,20 @@ function setToKorean(note) {
                         break;
                     case 14:
                         if (syllable_phonemes[0] == "#y") {
-                            syllable_phonemes = ["%ch"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["ch"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%ch"].concat(syllable_phonemes);
+                            syllable_phonemes = ["ch"].concat(syllable_phonemes);
                         }
                         break;
                     case 15:
-                        syllable_phonemes = ["%k"].concat(syllable_phonemes);
+                        syllable_phonemes = ["k"].concat(syllable_phonemes);
                         break;
                     case 16:
-                        syllable_phonemes = ["%t"].concat(syllable_phonemes);
+                        syllable_phonemes = ["t"].concat(syllable_phonemes);
                         break;
                     case 17:
-                        syllable_phonemes = ["%p"].concat(syllable_phonemes);
+                        syllable_phonemes = ["p"].concat(syllable_phonemes);
                         break;
                     default:
                         syllable_phonemes = ["hh"].concat(syllable_phonemes);
@@ -473,34 +473,34 @@ function setToKorean(note) {
                         break;
                     case 14:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["%ch"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["ch"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%ch"].concat(syllable_phonemes);
+                            syllable_phonemes = ["ch"].concat(syllable_phonemes);
                         }
                         break;
                     case 15:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["%ky"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["ky"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%k"].concat(syllable_phonemes);
+                            syllable_phonemes = ["k"].concat(syllable_phonemes);
                         }
                         break;
                     case 16:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["%ty"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["ty"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%t"].concat(syllable_phonemes);
+                            syllable_phonemes = ["t"].concat(syllable_phonemes);
                         }
                         break;
                     case 17:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["%py"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["py"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%p"].concat(syllable_phonemes);
+                            syllable_phonemes = ["p"].concat(syllable_phonemes);
                         }
                         break;
                     default:
@@ -592,21 +592,21 @@ function setToKorean(note) {
                         syllable_phonemes = ["#cl", "#ts"].concat(syllable_phonemes);
                         break;
                     case 14:
-                        syllable_phonemes = ["%tsh"].concat(syllable_phonemes);
+                        syllable_phonemes = ["tsh"].concat(syllable_phonemes);
                         break;
                     case 15:
                         if (syllable_phonemes[0] == "w") {
-                            syllable_phonemes = ["%kwh"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["kwh"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["%kh"].concat(syllable_phonemes);
+                            syllable_phonemes = ["kh"].concat(syllable_phonemes);
                         }
                         break;
                     case 16:
-                        syllable_phonemes = ["%th"].concat(syllable_phonemes);
+                        syllable_phonemes = ["th"].concat(syllable_phonemes);
                         break;
                     case 17:
-                        syllable_phonemes = ["%ph"].concat(syllable_phonemes);
+                        syllable_phonemes = ["ph"].concat(syllable_phonemes);
                         break;
                     default:
                         syllable_phonemes = ["h"].concat(syllable_phonemes);
