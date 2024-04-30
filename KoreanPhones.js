@@ -77,16 +77,16 @@ function setToKorean(note) {
                     syllable_phonemes = ["o"];
                     break;
                 case 9:
-                    note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "mandarin");
-                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "a"] : (11 == onset ? ["w", "a"] : ["#w", "a"]);
+                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "mandarin");
+                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "a"] : (11 == onset ? ["w", "a"] : ["#w", "a"]);
                     break;
                 case 10:
-                    note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "english");
-                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
+                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
+                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
                     break;
                 case 11:
-                    note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "english");
-                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
+                    note.setLanguageOverride("mandarin");
+                    syllable_phonemes = ["ue"];
                     break;
                 case 12:
                     note.setLanguageOverride(21 == coda ? "mandarin" : "japanese");
@@ -97,12 +97,12 @@ function setToKorean(note) {
                     syllable_phonemes = ["u"];
                     break;
                 case 14:
-                    note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "english");
-                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "O"] : (11 == onset ? ["w", "ao"] : ["#w", "ao"]);
+                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
+                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "O"] : (11 == onset ? ["w", "ao"] : ["#w", "ao"]);
                     break;
                 case 15:
-                    note.setLanguageOverride([12, 13, 14].indexOf(onset) == -1 ? "cantonese" : "english");
-                    syllable_phonemes = [12, 13, 14].indexOf(onset) == -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
+                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
+                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
                     break;
                 case 16:
                     note.setLanguageOverride("mandarin");
@@ -143,7 +143,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["#cl", "#t"].concat(syllable_phonemes);
                         break;
                     case 5:
-                        syllable_phonemes = ["#l"].concat(syllable_phonemes);
+                        syllable_phonemes = ["$t"].concat(syllable_phonemes);
                         break;
                     case 6:
                         syllable_phonemes = ["#m"].concat(syllable_phonemes);
@@ -566,7 +566,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["#cl", "#t"].concat(syllable_phonemes);
                         break;
                     case 5:
-                        syllable_phonemes = ["#l"].concat(syllable_phonemes);
+                        syllable_phonemes = ["$t"].concat(syllable_phonemes);
                         break;
                     case 6:
                         syllable_phonemes = ["#m"].concat(syllable_phonemes);
@@ -651,6 +651,10 @@ function setToKorean(note) {
         switch (phonemes[i][0]) {
             case '#':
                 note_durs.push(0.5);
+                note_strs.push(1);
+                break;
+            case '$':
+                note_durs.push(0.2);
                 note_strs.push(1);
                 break;
             case '%':
