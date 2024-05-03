@@ -46,15 +46,15 @@ function setToKorean(note) {
                     break;
                 case 1:
                     note.setLanguageOverride("english");
-                    syllable_phonemes = ["eh"];
+                    syllable_phonemes = ["ae"];
                     break;
                 case 2:
                     note.setLanguageOverride(21 == coda ? "mandarin" : "japanese");
                     syllable_phonemes = 21 == coda ? (11 == onset ? ["j", "a"] : ["#j", "a"]) : ["y", "a"];
                     break;
                 case 3:
-                    note.setLanguageOverride(21 == coda ? "english" : "japanese");
-                    syllable_phonemes = 21 == coda ? (11 == onset ? ["y", "eh"] : ["#y", "eh"]) : ["y", "e"];
+                    note.setLanguageOverride("english");
+                    syllable_phonemes = 11 == onset ? ["y", "ae"] : ["#y", "ae"];
                     break;
                 case 4:
                     note.setLanguageOverride("english");
@@ -81,8 +81,8 @@ function setToKorean(note) {
                     syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "a"] : (11 == onset ? ["w", "a"] : ["#w", "a"]);
                     break;
                 case 10:
-                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
-                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
+                    note.setLanguageOverride("english");
+                    syllable_phonemes = 11 == onset ? ["w", "ae"] : ["#w", "ae"];
                     break;
                 case 11:
                     note.setLanguageOverride("mandarin");
