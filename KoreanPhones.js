@@ -77,8 +77,8 @@ function setToKorean(note) {
                     syllable_phonemes = ["o"];
                     break;
                 case 9:
-                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "mandarin");
-                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "a"] : (11 == onset ? ["w", "a"] : ["#w", "a"]);
+                    note.setLanguageOverride(note.getMusicalType() == "sing" && [0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "mandarin");
+                    syllable_phonemes = note.getMusicalType() == "sing" && [0, 1, 15].indexOf(onset) != -1 ? ["w", "a"] : (11 == onset ? ["w", "a"] : ["#w", "a"]);
                     break;
                 case 10:
                     note.setLanguageOverride("english");
@@ -97,12 +97,12 @@ function setToKorean(note) {
                     syllable_phonemes = ["u"];
                     break;
                 case 14:
-                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
-                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "O"] : (11 == onset ? ["w", "ao"] : ["#w", "ao"]);
+                    note.setLanguageOverride(note.getMusicalType() == "sing" && [0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
+                    syllable_phonemes = note.getMusicalType() == "sing" && [0, 1, 15].indexOf(onset) != -1 ? ["w", "O"] : (11 == onset ? ["w", "ao"] : ["#w", "ao"]);
                     break;
                 case 15:
-                    note.setLanguageOverride([0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
-                    syllable_phonemes = [0, 1, 15].indexOf(onset) != -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
+                    note.setLanguageOverride(note.getMusicalType() == "sing" && [0, 1, 15].indexOf(onset) != -1 ? "cantonese" : "english");
+                    syllable_phonemes = note.getMusicalType() == "sing" && [0, 1, 15].indexOf(onset) != -1 ? ["w", "e"] : (11 == onset ? ["w", "eh"] : ["#w", "eh"]);
                     break;
                 case 16:
                     note.setLanguageOverride("mandarin");
