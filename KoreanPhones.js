@@ -240,6 +240,9 @@ function setToKorean(note) {
                         syllable_phonemes.push("cl");
                         break;
                 }
+                if (note.getMusicalType() == "rap") {
+                    note.setRapAccent(1);
+                }
             }
             else if ("english" == note.getLanguageOverride()) {
                 switch (onset) {
