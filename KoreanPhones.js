@@ -250,7 +250,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["g"].concat(syllable_phonemes);
                         break;
                     case 1:
-                        syllable_phonemes = ["#cl", "#k"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#cl", "#g"].concat(syllable_phonemes);
                         break;
                     case 2:
                         syllable_phonemes = ["#n"].concat(syllable_phonemes);
@@ -259,7 +259,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["d"].concat(syllable_phonemes);
                         break;
                     case 4:
-                        syllable_phonemes = ["#cl", "#t"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#cl", "#d"].concat(syllable_phonemes);
                         break;
                     case 5:
                         syllable_phonemes = ["dx"].concat(syllable_phonemes);
@@ -271,7 +271,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["b"].concat(syllable_phonemes);
                         break;
                     case 8:
-                        syllable_phonemes = ["#cl", "#p"].concat(syllable_phonemes);
+                        syllable_phonemes = ["#cl", "#b"].concat(syllable_phonemes);
                         break;
                     case 9:
                         if (syllable_phonemes[0] == "#y") {
@@ -307,10 +307,10 @@ function setToKorean(note) {
                         break;
                     case 13:
                         if (syllable_phonemes[0] == "#y") {
-                            syllable_phonemes = ["#cl", "#ch"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#cl", "#jh"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["#cl", "#ch"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#cl", "#jh"].concat(syllable_phonemes);
                         }
                         break;
                     case 14:
@@ -372,10 +372,10 @@ function setToKorean(note) {
                         break;
                     case 1:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["#cl", "#ky"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#cl", "#gy"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["#cl", "#k"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#cl", "#g"].concat(syllable_phonemes);
                         }
                         break;
                     case 2:
@@ -396,10 +396,10 @@ function setToKorean(note) {
                         break;
                     case 4:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["#cl", "#ty"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#cl", "#dy"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["#cl", "#t"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#cl", "#d"].concat(syllable_phonemes);
                         }
                         break;
                     case 5:
@@ -428,10 +428,10 @@ function setToKorean(note) {
                         break;
                     case 8:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["#cl", "#py"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#cl", "#by"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["#cl", "#p"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#cl", "#b"].concat(syllable_phonemes);
                         }
                         break;
                     case 9:
@@ -468,10 +468,10 @@ function setToKorean(note) {
                         break;
                     case 13:
                         if (syllable_phonemes[0] == "y") {
-                            syllable_phonemes = ["#cl", "#ch"].concat(syllable_phonemes.slice(1));
+                            syllable_phonemes = ["#cl", "#j"].concat(syllable_phonemes.slice(1));
                         }
                         else {
-                            syllable_phonemes = ["#cl", "#ch"].concat(syllable_phonemes);
+                            syllable_phonemes = ["#cl", "#j"].concat(syllable_phonemes);
                         }
                         break;
                     case 14:
