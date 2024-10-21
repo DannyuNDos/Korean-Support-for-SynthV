@@ -654,10 +654,10 @@ function setToKorean(note) {
         switch (phonemes[i][0]) {
             case '#':
                 note_durs.push(0.5);
-                note_strs.push(1);
+                note_strs.push(1.8);
                 break;
             case '$':
-                note_durs.push(0.2);
+                note_durs.push(0.3);
                 note_strs.push(1);
                 break;
             case '%':
