@@ -377,7 +377,7 @@ function setToKorean(note) {
                 break;
             case '$':
                 note_durs.push(0.3);
-                note_strs.push(1);
+                note_strs.push(0.2);
                 break;
             default:
                 note_durs.push(1);
