@@ -17,3 +17,5 @@ This script doesn't actually add Korean as a new language, but merely emulates K
 You must input Hangul for the Korean phonemes, not for the raw Korean text. For example, if you intend to input `갑니다`, input `감니다` instead.
 
 This script is guaranteed to work only under the standalone version of SynthV. Under the plugin version of SynthV, this script may suffer compatibility issues.
+
+**This script doesn't work in SynthV 2.**
