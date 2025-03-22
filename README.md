@@ -6,6 +6,8 @@ A script for alloting phonemes for Korean lyrics in SynthV.
 ### Installation
 Copy the `KoreanPhones.js` file to the `scripts` folder, as shown in https://manual.synthv.info/advanced/scripting/#adding-new-scripts.
 
+**Be sure to save the file in UTF-8 format.**
+
 ### Execution
 In the SynthV Studio, select the notes that has Korean lyrics written in Hangul, then execute `Scripts > Unofficial language support > Korean Phones` in the menu. If this doesn't appear in the menu, execute `Scripts > Rescan`, and try again.
 
@@ -18,4 +20,4 @@ You must input Hangul for the Korean phonemes, not for the raw Korean text. For 
 
 This script is guaranteed to work only under the standalone version of SynthV. Under the plugin version of SynthV, this script may suffer compatibility issues.
 
-**This script doesn't work in SynthV 2.**
+**This script doesn't work properly in SynthV 2 due to the changed mechanics of phoneme editing.**
