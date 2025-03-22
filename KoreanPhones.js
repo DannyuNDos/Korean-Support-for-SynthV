@@ -49,11 +49,11 @@ function setToKorean(note) {
                     break;
                 case 'ㅑ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "a"] : ["#j", "a"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["j", "a"] : ["#j", "a"];
                     break;
                 case 'ㅒ':
                     note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["y", "ae"] : ["#y", "ae"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["y", "ae"] : ["#y", "ae"];
                     break;
                 case 'ㅓ':
                     note.setLanguageOverride("mandarin");
@@ -65,11 +65,11 @@ function setToKorean(note) {
                     break;
                 case 'ㅕ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "@"] : ["#j", "@"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["j", "@"] : ["#j", "@"];
                     break;
                 case 'ㅖ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "e"] : ["#j", "e"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["j", "e"] : ["#j", "e"];
                     break;
                 case 'ㅗ':
                     note.setLanguageOverride("mandarin");
@@ -77,11 +77,11 @@ function setToKorean(note) {
                     break;
                 case 'ㅘ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["w", "a"] : ["#w", "a"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["w", "a"] : ["#w", "a"];
                     break;
                 case 'ㅙ':
                     note.setLanguageOverride("english");
-                    syllable_phonemes = 11 == onset ? ["w", "ae"] : ["#w", "ae"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["w", "ae"] : ["#w", "ae"];
                     break;
                 case 'ㅚ':
                     note.setLanguageOverride("mandarin");
@@ -89,7 +89,7 @@ function setToKorean(note) {
                     break;
                 case 'ㅛ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "U"] : ["#j", "U"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["j", "U"] : ["#j", "U"];
                     break;
                 case 'ㅜ':
                     note.setLanguageOverride("mandarin");
@@ -97,11 +97,11 @@ function setToKorean(note) {
                     break;
                 case 'ㅝ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["w", "@"] : ["#w", "@"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["w", "@"] : ["#w", "@"];
                     break;
                 case 'ㅞ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["w", "e"] : ["#w", "e"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["w", "e"] : ["#w", "e"];
                     break;
                 case 'ㅟ':
                     note.setLanguageOverride("mandarin");
@@ -109,7 +109,7 @@ function setToKorean(note) {
                     break;
                 case 'ㅠ':
                     note.setLanguageOverride("mandarin");
-                    syllable_phonemes = 11 == onset ? ["j", "u"] : ["#j", "u"];
+                    syllable_phonemes = 'ㅇ' == onsetN[onset] ? ["j", "u"] : ["#j", "u"];
                     break;
                 case 'ㅡ':
                     note.setLanguageOverride("mandarin");
@@ -236,7 +236,7 @@ function setToKorean(note) {
                         syllable_phonemes.push("p");
                         break;
                     default:
-                        syllable_phonemes.push("cl");
+                        syllable_phonemes.push("k");
                         break;
                 }
                 if (note.getMusicalType() == "rap") {
@@ -333,7 +333,7 @@ function setToKorean(note) {
                         syllable_phonemes = ["hh"].concat(syllable_phonemes);
                         break;
                 }
-                switch (coda) {
+                switch (codaN[coda]) {
                     case ' ':
                         break;
                     case 'ㄴ': case 'ㄵ': case 'ㄶ':
@@ -355,7 +355,7 @@ function setToKorean(note) {
                         syllable_phonemes.push("b");
                         break;
                     default:
-                        syllable_phonemes.push("cl");
+                        syllable_phonemes.push("g");
                         break;
                 }
             }
