@@ -360,6 +360,9 @@ function setToKorean(note) {
                 }
             }
         }
+        else {
+            return;
+        }
         phonemes = phonemes.concat(syllable_phonemes);
     }
     const phonemeStr = phonemes.join(" ").replaceAll(/#/, "").replaceAll(/\$/, "");
